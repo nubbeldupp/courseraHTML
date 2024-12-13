@@ -16,7 +16,7 @@
   </pre>
 
   <?php
-    print hash('sha256', 'Mirko Bjelic'); 
+    print "SHA256 of Mirko Bjelic: " . hash('sha256', 'Mirko Bjelic') . "<br>"; 
   ?>
 
 </body>
