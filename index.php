@@ -8,17 +8,15 @@
   <h1>Mirko Bjelic PHP</h1>
 
   <pre>
-     MMMMMMMM
-    M       M
-    M       M
-    M       M
-    M       M
-    M       M
-    MMMMMMMM
+    MM    MM
+    MM MM MM
+    MM    MM
+    MM    MM
+    MM    MM
   </pre>
 
   <?php
-    print "SHA256 of Mirko Bjelic: " . hash('sha256', 'Mirko Bjelic') . "<br>"; 
+    print hash('sha256', 'Mirko Bjelic'); 
   ?>
 
 </body>
