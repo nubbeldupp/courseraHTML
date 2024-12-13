@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mirko Bjelic PHP</title> 
+</head>
+<body>
+
+  <h1>Mirko Bjelic PHP</h1>
+
+  <pre>
+     MMMMMMMM
+    M       M
+    M       M
+    M       M
+    M       M
+    M       M
+    MMMMMMMM
+  </pre>
+
+  <?php
+    print "SHA256 of Mirko Bjelic: " . hash('sha256', 'Mirko Bjelic') . "<br>"; 
+  ?>
+
+</body>
+</html>
