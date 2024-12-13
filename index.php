@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mirko Bjelic PHP</title> 
+  <title>Mirko B PHP</title> 
 </head>
 <body>
 
-  <h1>Mirko Bjelic PHP</h1>
+  <h1>Mirko B PHP</h1>
 
   <pre>
     MM    MM
@@ -16,7 +16,7 @@
   </pre>
 
   <?php
-    print "SHA256 of Mirko Bjelic: " . hash('sha256', 'Mirko Bjelic') . "<br>"; 
+    print "SHA256 of Mirko B: " . hash('sha256', 'Mirko B') . "<br>"; 
   ?>
 
 </body>
