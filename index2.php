@@ -13,7 +13,7 @@ if ( isset($_GET['md5']) ) {
     $md5 = $_GET['md5'];
 
     // This is our alphabet
-    $txt = "abcdefghijklmnopqrstuvwxyz";
+    $txt = "1234567890";
     $show = 15;
 
     // Outer loop to go through the alphabet for the
@@ -64,16 +64,13 @@ if ( isset($_GET['md5']) ) {
 <!-- Use the very short syntax and call htmlentities() -->
 <p>Original Text: <?= htmlentities($goodtext); ?></p>
 <form>
-<input type="text" name="md5" size="60" />
+<input type="text" name="md5" size="40" />
 <input type="submit" value="Crack MD5"/>
 </form>
 <ul>
-<li><a href="index2.php">Reset</a></li>
-<li><a href="md5.php">MD5 Encoder</a></li>
-<li><a href="makecode.php">MD5 Code Maker</a></li>
-<li><a
-href="https://github.com/csev/wa4e/tree/master/code/crack"
-target="_blank">Source code for this application</a></li>
+<li>
+    <a href="index2.php">Reset</a>
+</li>
 </ul>
 </body>
 </html>
