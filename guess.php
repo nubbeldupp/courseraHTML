@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Guessing Game for Mirko B</title>
+        <title>Guessing Game for 84ccb6e9</title>
     </head>
     <body>
         <h1>Welcome to my guessing Game</h1>
