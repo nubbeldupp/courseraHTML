@@ -34,18 +34,18 @@ function check($computer, $human) {
     } else {
         return "You Win"; // Everything else is a WIN *HOORAY*
     }*/
-    function check($human, $computer) {
-        if ($human == $computer) {
-            return "Tie";
-        }
     
-        // Determine winner using the remainder operator
-        if (($human - $computer + 3) % 3 == 1) {
-            return "You Win";
-        } else {
-            return "You Lose";
-        }
+    if ($human == $computer) {
+        return "Tie";
     }
+
+    // Determine winner using the remainder operator
+    if (($human - $computer + 3) % 3 == 1) {
+        return "You Win";
+    } else {
+        return "You Lose";
+    }
+    
     return false;
 }
 
