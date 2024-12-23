@@ -45,6 +45,7 @@ function check($computer, $human) {
   
     // Calculate the difference (human - computer) and get the remainder when divided by 3
     $result = ($human - $computer) % 3;
+    echo $result;
   
     // Determine the outcome based on the remainder
     if ($result == 1) {
