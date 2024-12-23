@@ -23,7 +23,7 @@ $computer = rand(0,2);
 // and returns "Tie", "You Lose", "You Win" depending on play
 // where "You" is the human being addressed by the computer
 function check($computer, $human) {
-    if ( $human == $computer ) { //If both have the same it's a Tie
+    /*if ( $human == $computer ) { //If both have the same it's a Tie
         return "Tie";
     } else if ( $human == 0 && $computer == 1) { // Human Rock vs. Computer Paper is a Loss
         return "You Loose";
@@ -33,9 +33,23 @@ function check($computer, $human) {
         return "You Loose";
     } else {
         return "You Win"; // Everything else is a WIN *HOORAY*
+    }*/
+    function check($human, $computer) {
+        if ($human == $computer) {
+            return "Tie";
+        }
+    
+        // Determine winner using the remainder operator
+        if (($human - $computer + 3) % 3 == 1) {
+            return "You Win";
+        } else {
+            return "You Lose";
+        }
     }
     return false;
 }
+
+
 
 
 // Check to see how the play happenned
