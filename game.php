@@ -48,9 +48,9 @@ function check($computer, $human) {
   
     // Determine the outcome based on the remainder
     if ($result == 1) {
-      return "You Lose";
-    } else {
       return "You Win";
+    } else {
+      return "You Loose";
     }
   }
 
