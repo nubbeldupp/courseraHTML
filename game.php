@@ -16,29 +16,43 @@ if ( isset($_POST['logout']) ) {
 $names = array('Rock', 'Paper', 'Scissors');
 $human = isset($_POST["human"]) ? $_POST['human']+0 : -1;
 
-$computer = rand(0,2); // Hard code the computer to rock
-// TODO: Make the computer be random
-// $computer = rand(0,2);
+$computer = rand(0,2);
+
 
 // This function takes as its input the computer and human play
 // and returns "Tie", "You Lose", "You Win" depending on play
 // where "You" is the human being addressed by the computer
-function check($computer, $human) {
-    // For now this is a rock-savant checking function
-    // TODO: Fix this
-    if ( $human == $computer ) {
+/*function check($computer, $human) {
+    if ( $human == $computer ) { //If both have the same it's a Tie
         return "Tie";
-    } else if ( $human == 0 && $computer == 1 ) {
+    } else if ( $human == 0 && $computer == 1) { // Human Rock vs. Computer Paper is a Loss
         return "You Loose";
-    } else if ($human == 1 && $computer == 2) {
+    } else if ($human == 1 && $computer == 2) { // Human Paper vs. Computer Scissors is a Loss
         return "You Loose";
-    } else if ($human == 2 && $computer == 0) {
+    } else if ($human == 2 && $computer == 0) { // Human Scissors vs. Computer Rock is a Loss
         return "You Loose";
     } else {
-        return "You Win";
+        return "You Win"; // Everything else is a WIN *HOORAY*
     }
     return false;
-}
+}*/
+
+function check($computer, $human) {
+    // If both have the same, it's a Tie
+    if ($human == $computer) {
+      return "Tie";
+    }
+  
+    // Calculate the difference (human - computer) and get the remainder when divided by 3
+    $result = ($human - $computer) % 3;
+  
+    // Determine the outcome based on the remainder
+    if ($result == 1) {
+      return "You Lose";
+    } else {
+      return "You Win";
+    }
+  }
 
 // Check to see how the play happenned
 $result = check($computer, $human);
