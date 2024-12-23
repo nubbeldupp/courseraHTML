@@ -16,7 +16,7 @@ if ( isset($_POST['logout']) ) {
 $names = array('Rock', 'Paper', 'Scissors');
 $human = isset($_POST["human"]) ? $_POST['human']+0 : -1;
 
-$computer = 0; // Hard code the computer to rock
+$computer = rand(0,2); // Hard code the computer to rock
 // TODO: Make the computer be random
 // $computer = rand(0,2);
 
@@ -26,12 +26,16 @@ $computer = 0; // Hard code the computer to rock
 function check($computer, $human) {
     // For now this is a rock-savant checking function
     // TODO: Fix this
-    if ( $human == 0 ) {
+    if ( $human == $computer ) {
         return "Tie";
-    } else if ( $human == 1 ) {
+    } else if ( $human == 0 && $computer == 1 ) {
+        return "You Loose";
+    } else if ($human == 1 && $computer == 2) {
+        return "You Loose";
+    } else if ($human == 2 && $computer == 0) {
+        return "You Loose";
+    } else {
         return "You Win";
-    } else if ( $human == 2 ) {
-        return "You Lose";
     }
     return false;
 }
