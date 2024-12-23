@@ -36,24 +36,19 @@ $computer = rand(0,2);
     }
     return false;
 }*/
-
 function check($computer, $human) {
-    // If both have the same, it's a Tie
-    if ($human == $computer) {
-      return "Tie";
+    // Calculate the difference (human - computer)
+    $diff = ($human - $computer + 3) % 3; 
+
+    // Determine the result based on the difference
+    if ($diff == 0) {
+        return "Tie";
+    } elseif ($diff == 1) {
+        return "You Lose";
+    } else { // $diff == 2
+        return "You Win";
     }
-  
-    // Calculate the difference (human - computer) and get the remainder when divided by 3
-    $result = ($human - $computer) % 2;
-    echo $result;
-  
-    // Determine the outcome based on the remainder
-    if ($result == 1) {
-      return "You Win";
-    } else {
-      return "You Loose";
-    }
-  }
+}
 
 // Check to see how the play happenned
 $result = check($computer, $human);
