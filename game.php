@@ -60,7 +60,7 @@ $result = check($computer, $human);
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mirko B's Rock, Paper, Scissors Game</title>
+<title>84ccb6e9 - Rock, Paper, Scissors Game</title>
 <?php require_once "bootstrap.php"; ?>
 </head>
 <body>
