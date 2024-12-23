@@ -7,7 +7,7 @@ if ( ! isset($_GET['name']) || strlen($_GET['name']) < 1  ) {
 
 // If the user requested logout go back to index.php
 if ( isset($_POST['logout']) ) {
-    header('Location: index.php');
+    header('Location: index3.php');
     return;
 }
 
@@ -43,7 +43,7 @@ $result = check($computer, $human);
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dr. Chuck's Rock, Paper, Scissors Game</title>
+<title>Mirko B's Rock, Paper, Scissors Game</title>
 <?php require_once "bootstrap.php"; ?>
 </head>
 <body>
